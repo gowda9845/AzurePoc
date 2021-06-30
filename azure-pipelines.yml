@@ -33,7 +33,7 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/webapp'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'drop'
 
 
