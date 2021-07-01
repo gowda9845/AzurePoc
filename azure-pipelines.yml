@@ -35,5 +35,5 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
+    PathtoPublish: '-r win-x64 -p:PublishSingleFile=True --self-contained false -o $(Build.ArtifactStagingDirectory))'
   condition: succeededOrFailed()
